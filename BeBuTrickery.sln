@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeBuTrickeryGUI", "BeBuTrickeryGUI\BeBuTrickeryGUI.csproj", "{FB280920-D574-4032-A115-CA994A954579}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeBuTrickery_lib", "BeBuTrickery_lib\BeBuTrickery_lib.csproj", "{2F790C55-FA4E-4080-979C-0CE22429B290}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FB280920-D574-4032-A115-CA994A954579}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB280920-D574-4032-A115-CA994A954579}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB280920-D574-4032-A115-CA994A954579}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F790C55-FA4E-4080-979C-0CE22429B290}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F790C55-FA4E-4080-979C-0CE22429B290}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F790C55-FA4E-4080-979C-0CE22429B290}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F790C55-FA4E-4080-979C-0CE22429B290}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
