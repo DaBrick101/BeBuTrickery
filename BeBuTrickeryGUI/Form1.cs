@@ -52,6 +52,35 @@ namespace BeBuTrickeryGUI
 
         private void SetTxtBoxRandomNumbers()
         {
+            #region MyRegion
+
+            if (diceNumbersPlayer[0] == seedNumber)
+            {
+                txt_Zahl1.BackColor = Color.Green;
+            }
+            if (diceNumbersPlayer[1] == seedNumber)
+            {
+                txt_Zahl2.BackColor = Color.Green;
+
+            }
+            if (diceNumbersPlayer[2] == seedNumber)
+            {
+                txt_Zahl3.BackColor = Color.Green;
+
+            }
+            if (diceNumbersPlayer[3] == seedNumber)
+            {
+                txt_Zahl4.BackColor = Color.Green;
+
+            }
+            if (diceNumbersPlayer[4] == seedNumber)
+            {
+                txt_Zahl5.BackColor = Color.Green;
+
+            }
+
+            #endregion
+
             txt_Zahl1.Text = diceNumbersPlayer[0].ToString();
             txt_Zahl2.Text = diceNumbersPlayer[1].ToString();
             txt_Zahl3.Text = diceNumbersPlayer[2].ToString();
@@ -67,7 +96,11 @@ namespace BeBuTrickeryGUI
             SetSeedNumbertxt();
             btn_Start.Enabled = true;
             btn_Anfangszahl.Enabled = false;
-
+            txt_Zahl1.BackColor = Color.Red;
+            txt_Zahl2.BackColor = Color.Red;
+            txt_Zahl3.BackColor = Color.Red;
+            txt_Zahl4.BackColor = Color.Red;
+            txt_Zahl5.BackColor = Color.Red;
         }
 
         private void SetSeedNumbertxt()
