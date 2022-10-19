@@ -2,14 +2,14 @@
 
 namespace BeBuTrickery_lib.Gamefield;
 
-public class Gameboard
+public class Gamefield
 {
     private Player _player;
     private int[] _numbers;
     private int _seedNumber;
     private Random _rnd = new Random();
 
-    public Gameboard()
+    public Gamefield()
     {
         _player = new Player();
     }
