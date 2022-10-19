@@ -55,5 +55,10 @@ namespace BeBuTrickeryGUI
             }
             return _points;
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
