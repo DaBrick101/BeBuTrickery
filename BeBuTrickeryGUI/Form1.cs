@@ -22,6 +22,10 @@ namespace BeBuTrickeryGUI
             _player2 = new Player();
         }
 
+        public Form1()
+        {
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
