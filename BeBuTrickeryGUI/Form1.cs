@@ -15,6 +15,10 @@ namespace BeBuTrickeryGUI
             _gamefield = gamefield;
         }
 
+        public Form1()
+        {
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
