@@ -11,6 +11,6 @@ public class Player
 
     public void SetPoints(int points)
     {
-        _points = points;
+        _points = points + _points;
     }
 }

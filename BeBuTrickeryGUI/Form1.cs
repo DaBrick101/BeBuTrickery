@@ -21,11 +21,6 @@ namespace BeBuTrickeryGUI
             _player1 = new Player();
             _player2 = new Player();
         }
-
-        public Form1()
-        {
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -47,10 +42,9 @@ namespace BeBuTrickeryGUI
         {
             foreach (var number in diceNumbersPlayer)
             {
-                bool exists = Array.Exists(diceNumbersPlayer, number => number == seedNumber);
-                if (exists)
+                if (number == seedNumber)
                 {
-                    _points += seedNumber;
+                   _points += seedNumber;
                 }
             }
             return _points;
@@ -67,6 +61,7 @@ namespace BeBuTrickeryGUI
 
         private void btn_Anfangszahl_Click(object sender, EventArgs e)
         {
+            CheckTurn();
             seedNumber = _gamefield.GenerateSeedNumber();
             SetSeedNumbertxt();
             btn_Start.Enabled = true;
@@ -82,14 +77,12 @@ namespace BeBuTrickeryGUI
         private void btn_Start_Click(object sender, EventArgs e)
         {
             turn++;
-            CheckTurn();
             diceNumbersPlayer = _gamefield.GenerateDiceNumbers();
-            seedNumber = _gamefield.GenerateSeedNumber();
             SetTxtBoxRandomNumbers();
             CalcPoints();
             _currentPlayer.SetPoints(_points);
-            _points = 0;
             SetPlayerScore();
+            _points = 0;
             btn_Anfangszahl.Enabled = true;
             btn_Start.Enabled = false;
         }
