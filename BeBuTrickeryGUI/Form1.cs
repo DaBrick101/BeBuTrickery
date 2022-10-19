@@ -61,6 +61,7 @@ namespace BeBuTrickeryGUI
 
         private void btn_Anfangszahl_Click(object sender, EventArgs e)
         {
+            StopGame();
             CheckTurn();
             seedNumber = _gamefield.GenerateSeedNumber();
             SetSeedNumbertxt();
@@ -91,6 +92,27 @@ namespace BeBuTrickeryGUI
         {
             txt_Player1.Text  = _player1.GetPoints().ToString();
             txt_Player2.Text  = _player2.GetPoints().ToString();
+        }
+
+        private void StopGame()
+        {
+            if (turn == 20)
+            {
+                if (_player1.GetPoints() > _player2.GetPoints())
+                {
+                    txt_Player1.ForeColor = Color.Green;
+                    txt_Player1.Text = "Du hast gebonnen";
+                    txt_Player2.ForeColor = Color.Red;
+                    txt_Player2.Text = "Du hat Veloden";
+                }
+                else if (_player2.GetPoints() > _player1.GetPoints())
+                {
+                    txt_Player2.ForeColor = Color.Green;
+                    txt_Player2.Text = "Du hast gebonnen";
+                    txt_Player1.ForeColor = Color.Red;
+                    txt_Player1.Text = "Du hat Veloden";
+                }
+            }
         }
     }
 }
