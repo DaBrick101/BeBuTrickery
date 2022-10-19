@@ -1,8 +1,10 @@
-﻿namespace BeBuTrickery_lib.Gamefield;
+﻿using BeBuTrickery_lib.Participant;
 
-public class Gameboard : IGameboard
+namespace BeBuTrickery_lib.Gamefield;
+
+public class Gameboard
 {
-    private IPlayer _player;
+    private Player _player;
     private int[] _numbers;
     private int _seedNumber;
     private Random _rnd = new Random();
@@ -11,12 +13,12 @@ public class Gameboard : IGameboard
     {
         _player = new Player();
     }
-    public void SetPlayer(IPlayer player)
+    public void SetPlayer(Player player)
     {
         _player = player;
     }
 
-    public IPlayer GetPlayer()
+    public Player GetPlayer()
     {
         return _player;
     }
