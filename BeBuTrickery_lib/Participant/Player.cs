@@ -6,6 +6,11 @@ public class Player
 
     public int GetPoints()
     {
-        throw new NotImplementedException();
+        return _points;
+    }
+
+    public void SetPoints(int points)
+    {
+        _points = points;
     }
 }
