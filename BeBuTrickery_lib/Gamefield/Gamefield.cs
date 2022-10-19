@@ -44,8 +44,4 @@ public class Gamefield
         throw new NotImplementedException();
     }
 
-    public void SetDiceNumbers(int[] diceNumbers)
-    {
-        throw new NotImplementedException();
-    }
 }

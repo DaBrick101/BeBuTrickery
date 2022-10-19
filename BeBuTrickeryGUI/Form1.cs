@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using BeBuTrickery_lib.Participant;
 using BeBuTrickery_lib.Gamefield;
 namespace BeBuTrickeryGUI
@@ -5,6 +6,9 @@ namespace BeBuTrickeryGUI
     public partial class Form1 : Form
     {
         private Gamefield _gamefield;
+        private int[] diceNumbersPlayer1;
+        private int[] diceNumbersPlayer2;
+        private int turn;
         public Form1(Gamefield gamefield)
         {
             InitializeComponent();
@@ -18,7 +22,8 @@ namespace BeBuTrickeryGUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            _gamefield.GenerateDiceNumbers();
+            //diceNumbersPlayer1.GenerateDiceNumbers();
+            turn++;
         }
     }
 }
