@@ -25,5 +25,10 @@ namespace BeBuTrickeryGUI
             //diceNumbersPlayer1.GenerateDiceNumbers();
             turn++;
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
