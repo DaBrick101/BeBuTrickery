@@ -47,6 +47,7 @@
             this.Player1 = new System.Windows.Forms.Label();
             this.Player2 = new System.Windows.Forms.Label();
             this.txt_Player2 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_Start
@@ -210,7 +211,7 @@
             this.btn_Anfangszahl.Name = "btn_Anfangszahl";
             this.btn_Anfangszahl.Size = new System.Drawing.Size(125, 29);
             this.btn_Anfangszahl.TabIndex = 17;
-            this.btn_Anfangszahl.Text = "Generate Az";
+            this.btn_Anfangszahl.Text = "Generate Seed";
             this.btn_Anfangszahl.UseVisualStyleBackColor = true;
             this.btn_Anfangszahl.Click += new System.EventHandler(this.btn_Anfangszahl_Click);
             // 
@@ -232,7 +233,7 @@
             this.Player1.AutoSize = true;
             this.Player1.BackColor = System.Drawing.Color.Transparent;
             this.Player1.ForeColor = System.Drawing.Color.Red;
-            this.Player1.Location = new System.Drawing.Point(598, 318);
+            this.Player1.Location = new System.Drawing.Point(663, 293);
             this.Player1.Name = "Player1";
             this.Player1.Size = new System.Drawing.Size(60, 20);
             this.Player1.TabIndex = 19;
@@ -243,7 +244,7 @@
             this.Player2.AutoSize = true;
             this.Player2.BackColor = System.Drawing.Color.Transparent;
             this.Player2.ForeColor = System.Drawing.Color.Red;
-            this.Player2.Location = new System.Drawing.Point(598, 351);
+            this.Player2.Location = new System.Drawing.Point(663, 359);
             this.Player2.Name = "Player2";
             this.Player2.Size = new System.Drawing.Size(60, 20);
             this.Player2.TabIndex = 21;
@@ -254,13 +255,24 @@
             this.txt_Player2.BackColor = System.Drawing.SystemColors.MenuText;
             this.txt_Player2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Player2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.txt_Player2.Location = new System.Drawing.Point(663, 349);
+            this.txt_Player2.Location = new System.Drawing.Point(663, 382);
             this.txt_Player2.Name = "txt_Player2";
             this.txt_Player2.ReadOnly = true;
             this.txt_Player2.Size = new System.Drawing.Size(125, 27);
             this.txt_Player2.TabIndex = 20;
             this.txt_Player2.TabStop = false;
             this.txt_Player2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 431);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(10, 29);
+            this.button1.TabIndex = 22;
+            this.button1.TabStop = false;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -269,6 +281,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Player2);
             this.Controls.Add(this.txt_Player2);
             this.Controls.Add(this.Player1);
@@ -316,5 +329,6 @@
         private Label Player1;
         private Label Player2;
         private TextBox txt_Player2;
+        private Button button1;
     }
 }

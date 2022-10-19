@@ -1,6 +1,8 @@
 using System.Runtime.InteropServices;
 using BeBuTrickery_lib.Participant;
 using BeBuTrickery_lib.Gamefield;
+using Microsoft.VisualBasic;
+
 namespace BeBuTrickeryGUI
 {
     public partial class Form1 : Form
@@ -8,12 +10,15 @@ namespace BeBuTrickeryGUI
         private Gamefield _gamefield;
         private Player _player1;
         private Player _player2;
+        private string _playerName;
         private Player _currentPlayer;
         private int[] diceNumbersPlayer = new int[5];
         private int seedNumber;
         private int _points;
         private int turn;
-        
+
+        //Namen auswahl, Ende schöner machen,Start Schöninger, Wer turned dran woran an orhan am ohr am bam 
+        //
         public Form1(Gamefield gamefield, Player player)
         {
             InitializeComponent();
@@ -23,7 +28,11 @@ namespace BeBuTrickeryGUI
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            _playerName = Interaction.InputBox("Bitte geben Sie den Namen für den 1 Spieler ein...", "Name Spieler 1", "", this.Height / 2, this.Width / 2);
+            _player1.SetName(_playerName);
+            _playerName = Interaction.InputBox("Bitte geben Sie den Namen für den 2 Spieler ein...", "Name Spieler 2", "", this.Height / 2, this.Width / 2);
+            _player2.SetName(_playerName);
+            SetPlayerNameLable();
         }
 
         private void CheckTurn()
@@ -127,6 +136,11 @@ namespace BeBuTrickeryGUI
             txt_Player2.Text  = _player2.GetPoints().ToString();
         }
 
+        private void SetPlayerNameLable()
+        {
+            Player1.Text = _player1.GetName();
+            Player2.Text = _player2.GetName();
+        }
         private void StopGame()
         {
             if (turn == 20)
@@ -146,6 +160,11 @@ namespace BeBuTrickeryGUI
                     txt_Player1.Text = "Du hat Veloden";
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.BackgroundImage = Image.FromFile("C:\\Users\\Ricardo.Buchebner\\source\\repos\\BeBuTrickery\\BeBuTrickeryGUI\\Images\\Unbenannt.PNG");
         }
     }
 }
